@@ -24,7 +24,7 @@ class DRGradientView: UIView {
   
   func shadowAsInverse() -> CAGradientLayer {
     
-    let newShadowFrame = CGRectMake(0, 0, self.bounds.width, 2)
+    let newShadowFrame = CGRectMake(0, 0, self.bounds.width, self.bounds.height)
     newShadow.frame = newShadowFrame
     // 渐变的方向
     newShadow.startPoint = CGPointMake(0.0, 0.5)
