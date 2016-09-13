@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F23EFD051D87E3A300458FF1 /* DRGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EFD041D87E3A300458FF1 /* DRGradientView.swift */; };
 		F2985B1A1D816A05007EF358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2985B191D816A05007EF358 /* AppDelegate.swift */; };
 		F2985B1C1D816A05007EF358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2985B1B1D816A05007EF358 /* ViewController.swift */; };
 		F2985B1F1D816A05007EF358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2985B1D1D816A05007EF358 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F23EFD041D87E3A300458FF1 /* DRGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRGradientView.swift; sourceTree = "<group>"; };
 		F2985B161D816A05007EF358 /* 渐变色.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "渐变色.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2985B191D816A05007EF358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2985B1B1D816A05007EF358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				F2985B191D816A05007EF358 /* AppDelegate.swift */,
 				F2985B1B1D816A05007EF358 /* ViewController.swift */,
+				F23EFD041D87E3A300458FF1 /* DRGradientView.swift */,
 				F2985B1D1D816A05007EF358 /* Main.storyboard */,
 				F2985B201D816A05007EF358 /* Assets.xcassets */,
 				F2985B221D816A05007EF358 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23EFD051D87E3A300458FF1 /* DRGradientView.swift in Sources */,
 				F2985B1C1D816A05007EF358 /* ViewController.swift in Sources */,
 				F2985B1A1D816A05007EF358 /* AppDelegate.swift in Sources */,
 			);
@@ -295,6 +299,7 @@
 				F2985B2A1D816A05007EF358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
