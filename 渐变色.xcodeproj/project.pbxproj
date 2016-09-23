@@ -100,6 +100,7 @@
 					F2985B151D816A05007EF358 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = X342LX7QRW;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -263,6 +264,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.Pun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -277,6 +279,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.Pun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

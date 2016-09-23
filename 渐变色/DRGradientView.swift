@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DRGradientView: UIView {
+class DRGradientView: UIView, CAAnimationDelegate {
 
   var newShadow:CAGradientLayer!
   override init(frame: CGRect) {
@@ -24,11 +24,11 @@ class DRGradientView: UIView {
   
   func shadowAsInverse() -> CAGradientLayer {
     
-    let newShadowFrame = CGRectMake(0, 0, self.bounds.width, self.bounds.height)
+    let newShadowFrame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
     newShadow.frame = newShadowFrame
     // 渐变的方向
-    newShadow.startPoint = CGPointMake(0.0, 0.5)
-    newShadow.endPoint   = CGPointMake(1.0, 0.5)
+    newShadow.startPoint = CGPoint(x: 0.0, y: 0.5)
+    newShadow.endPoint   = CGPoint(x: 1.0, y: 0.5)
     // 添加渐变的颜色组合
     let  colors = NSMutableArray()
     var hue = 0
@@ -38,7 +38,7 @@ class DRGradientView: UIView {
       }
       let color:UIColor
       color = UIColor(hue: 1.0 * CGFloat(hue) / 360.0, saturation: 1.0, brightness: 1.0, alpha: 1.0)
-      colors.addObject(color.CGColor)
+      colors.add(color.cgColor)
       hue += 5
     }
     newShadow.colors = colors as [AnyObject]
@@ -47,7 +47,7 @@ class DRGradientView: UIView {
     let colorArray = NSMutableArray(array: newShadow.colors!)
     let lastColor = colorArray.lastObject!
     colorArray.removeLastObject()
-    colorArray.insertObject(lastColor, atIndex: 0)
+    colorArray.insert(lastColor, at: 0)
     let shiftedColors = NSArray(array: colorArray)
     newShadow.colors = shiftedColors as [AnyObject]
     let animation = CABasicAnimation(keyPath: "a")
@@ -55,7 +55,7 @@ class DRGradientView: UIView {
     animation.duration = 0.02
     animation.fillMode = kCAFillModeForwards
     animation.delegate = self
-    newShadow.addAnimation(animation, forKey: "gavin_animateGradient")
+    newShadow.add(animation, forKey: "gavin_animateGradient")
     
     return newShadow;
   }
@@ -64,12 +64,12 @@ class DRGradientView: UIView {
 
 extension DRGradientView {
   
-  override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+   func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
     
     let colorArray = NSMutableArray(array: newShadow.colors!)
     let lastColor = colorArray.lastObject!
     colorArray.removeLastObject()
-    colorArray.insertObject(lastColor, atIndex: 0)
+    colorArray.insert(lastColor, at: 0)
         
     let shiftedColors = NSArray(array: colorArray)
     newShadow.colors = shiftedColors as [AnyObject]
@@ -79,7 +79,7 @@ extension DRGradientView {
     animation.duration = 0.02
     animation.fillMode = kCAFillModeForwards
     animation.delegate = self
-    newShadow.addAnimation(animation, forKey: "gavin_animateGradient")
+    newShadow.add(animation, forKey: "gavin_animateGradient")
     
   }
 }

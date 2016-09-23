@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let gra = DRGradientView(frame: CGRectMake(0, 50, self.view.bounds.width, 2))
+    let gra = DRGradientView(frame: CGRect(x: 0, y: 50, width: self.view.bounds.width, height: 2))
     self.view.addSubview(gra)
     
   }
